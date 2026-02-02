@@ -1,4 +1,6 @@
 console.log('Hello from app.js! Your JavaScript is connected and running!');
+
+import * as orderForm from "./order-handler.js"; 
 // --- Part 1: Select HTML Elements ----
 // We use document.getElementById() to get a reference to an element by its unique ID.
 // We store these references in 'const' variables because the elements themselves won't change.
@@ -45,6 +47,6 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log('DOM fully loaded and parsed, App is ready for interaction')
     // Attach an event listener to our 'updateButton.
     // When 'updateButton' receives a 'click' event, the 'handleButtonClick' function will execute.
-    addItemButton.addEventListener('click', handleButtonClick); // event listener had already been updated
+    // addItemButton.addEventListener('click', handleButtonClick); // event listener had already been updated
 
 });
