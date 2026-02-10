@@ -7,16 +7,16 @@ const orderSummary = document.getElementById('order-summary');
 
 const handleOrderSubmit = function(event) {
     event.preventDefault();
-    const formData = orderHandler.getOrderInputs();
-    let message = `${formData.qty} ${formData.size} T-Shirt`;
-    if(formData.qty > 1) {
+    const orderData = orderHandler.getOrderInputs();
+    let message = `${orderData.qty} ${orderData.size} T-Shirt`;
+    if(orderData.qty > 1) {
         message += `s`;
     }
-    if(formData.giftWrap === true) {
+    if(orderData.giftWrap === true) {
         message += ` with Gift Wrapping`;
     }
     orderSummary.textContent = message;
-    console.log(formData)
+    console.log(orderData);
 };
 
 const init = function() {
