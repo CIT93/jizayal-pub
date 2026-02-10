@@ -3,9 +3,9 @@ const giftWrapPrice = 5;
 
 
 export const calculateTotal = function(orderData) {
-    const orderTotal = orderData.qty * tshirtPrice;
+    let orderTotal = orderData.qty * tshirtPrice;
     if (orderData.giftWrap === true)  {
-        orderTotal += giftWrapPrice;
+        orderTotal = orderTotal + giftWrapPrice;
     }
     return {
         totalPrice: orderTotal
