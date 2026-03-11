@@ -20,6 +20,7 @@ const handleOrderSubmit = function(event) {
     };
 
     orders.push(newOrder);
+    orderStorage.saveOrders(orders);
     
     resultsDisplay.displayResults(newOrder);
 };
